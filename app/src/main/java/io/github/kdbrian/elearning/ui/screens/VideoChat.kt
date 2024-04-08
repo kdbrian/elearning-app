@@ -39,6 +39,8 @@ import androidx.navigation.NavController
 import io.github.kdbrian.elearning.R
 import io.github.kdbrian.elearning.ui.components.CustomComposables
 import io.github.kdbrian.elearning.ui.theme.ElearningTheme
+import androidx.navigation.compose.rememberNavController
+
 
 @Composable
 fun VideoChat(navController: NavController) {
@@ -196,6 +198,6 @@ fun VideoChat(navController: NavController) {
 @Composable
 fun VideoChatPrev() {
     ElearningTheme {
-        VideoChat()
+        VideoChat(rememberNavController())
     }
 }

@@ -43,6 +43,8 @@ import io.github.kdbrian.elearning.ui.theme.ElearningTheme
 import io.github.kdbrian.elearning.ui.theme.darkBlue
 import io.github.kdbrian.elearning.ui.theme.primaryWhite
 
+import io.github.kdbrian.elearning.nav.APPSCREENS
+import androidx.compose.foundation.clickable
 
 @OptIn(ExperimentalMaterial3Api::class)
 @androidx.compose.runtime.Composable
@@ -136,11 +138,12 @@ fun OnboardingScreen(navController: NavController) {
 
 
             Card(
-                onClick = { /*TODO*/ },
+                onClick = { navController.navigate(APPSCREENS.HOME.name) },
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
                     .padding(20.dp)
-                    .fillMaxWidth(),
+                    .fillMaxWidth()
+		    ,
                 colors = CardDefaults.cardColors(
                     containerColor = darkBlue,
                     contentColor = Color.White
